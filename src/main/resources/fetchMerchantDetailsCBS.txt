@@ -1,0 +1,19 @@
+select 
+  msd.COD_CUST_ID "Customer Id", msd.ACTIVATION_DATE_TIME "Activation Date",
+  cmst.REF_CUST_EMAIL "email", msd.SHOP_DISPLAY_NAME "orgName", msd.MERCHANT_TRADE_VALUE_5 "Merchant Trade Value 5", 
+  msd.MERCHANT_TRADE_VALUE_6 "Merchant Trade Value 6", cmst.REF_CUST_IT_NUM "panNumber", cmst.NAM_CUST_FULL "managerName",
+  cmst.TXT_CUSTADR_ADD1 "Add Line 1", cmst.TXT_CUSTADR_ADD2 "Add Line 2", cmst.TXT_CUSTADR_ADD3 "Add Line 3", 
+  cmst.NAM_CUSTADR_CITY "City", cmst.NAM_CUSTADR_STATE "State", cmst.NAM_CUSTADR_CNTRY "Country", cmst.TXT_CUSTADR_ZIP "ZIP",
+  cmst.COD_CUST_NATL_ID "mobile", xma.COD_ACCT_NO "bankAccountNo",
+  cmst.NAM_CUST_FULL "contactName", cmst.COD_CUST_NATL_ID "operatorMobileNumber", cmst.REF_CUST_EMAIL "operatorEmail", 
+  cmst.COD_AADHAAR_NO "aadhar", msd.QR_STRING "QR String", msd.CUSTOM_FIELDS_6 "UPI String"
+from 
+      FCRHOST.CI_X_MERCHANT_SEG_DETAILS msd, FCRHOST.CI_CUSTMAST cmst, FCRHOST.CH_X_MOBILE_ACCT_XREF xma 
+where 
+       msd.ACTIVATION_DATE_TIME  BETWEEN :FROM_DATE and :TO_DATE
+       and msd.COD_CUST_ID = cmst.COD_CUST_ID
+       and msd.COD_CUST_ID = xma.COD_CUST_ID
+       and xma.COD_CUST_TYP= :CUST_TYPE
+       and xma.COD_CUST_CATEGORY = :CUST_CATEGORY
+       and msd.MERCHANT_TRADE_VALUE_5 is not null
+       and msd.MERCHANT_TRADE_VALUE_6 is not null

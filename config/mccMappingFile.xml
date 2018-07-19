@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <merchantTradeValues>
+    <merchantTradeValue5 id="Food &#38; Beverages">
+       <merchantTradeValue6 id="Restaurant" mcc="5812" />
+       <merchantTradeValue6 id="Fast food &#38; QSR" mcc="5814" />
+       <merchantTradeValue6 id="Cafe &#38; Bakeries" mcc="5462" />
+       <merchantTradeValue6 id="Ice cream parlors" mcc="5441" />
+       <merchantTradeValue6 id="Sweet shops" mcc="5441" />
+       <merchantTradeValue6 id="Dairy" mcc="5451" />
+       <merchantTradeValue6 id="Pan/Tea shop" mcc="5499" />
+    </merchantTradeValue5>
+    <merchantTradeValue5 id="Healthcare">
+       <merchantTradeValue6 id="Pharmacy" mcc="5912" />
+       <merchantTradeValue6 id="Diagnostic Labs" mcc="8071" />
+       <merchantTradeValue6 id="Hospital" mcc="8062" />
+       <merchantTradeValue6 id="Doctors &#38; Clinics" mcc="8011" />
+       <merchantTradeValue6 id="Dentist" mcc="8021" />
+       <merchantTradeValue6 id="Dietician" mcc="8099" />
+    </merchantTradeValue5>
+    <merchantTradeValue5 id="Beauty &#38; Wellness">
+       <merchantTradeValue6 id="Beauty Parlour" mcc="7298" />
+       <merchantTradeValue6 id="Saloon &#38; SPA" mcc="7297" />
+       <merchantTradeValue6 id="Gym &#38; Fitness center" mcc="7997" />
+    </merchantTradeValue5>
+    <merchantTradeValue5 id="Entertainment">
+       <merchantTradeValue6 id="Amusement park" mcc="7996" />
+       <merchantTradeValue6 id="Gaming/Bowling Arcades" mcc="7994" />
+       <merchantTradeValue6 id="Movie Theatres" mcc="7832" />
+    </merchantTradeValue5>
+    <merchantTradeValue5 id="Retail &#38; Shopping">
+       <merchantTradeValue6 id="Apparels" mcc="5651" />
+       <merchantTradeValue6 id="Footwear" mcc="5661" />
+       <merchantTradeValue6 id="Jewelry" mcc="5094" />
+       <merchantTradeValue6 id="Mobile &#38; Electronic white goods" mcc="5732" />
+       <merchantTradeValue6 id="General stores &#38; Confectionaries" mcc="5311" />
+       <merchantTradeValue6 id="Supermarkets &#38; Hypermarkets" mcc="5411" />
+       <merchantTradeValue6 id="Gift &#38; Stationery shop" mcc="5947" />
+       <merchantTradeValue6 id="Furniture" mcc="5712" />
+       <merchantTradeValue6 id="Kitchen &#38; Household items" mcc="5331" />
+       <merchantTradeValue6 id="Hardware stores" mcc="5072" />
+    </merchantTradeValue5>
+    <merchantTradeValue5 id="Education &#38; Hobby classes">
+       <merchantTradeValue6 id="School &#38; Colleges" mcc="8299" />
+       <merchantTradeValue6 id="Tuitions Classes" mcc="8299" />
+       <merchantTradeValue6 id="Dance classes" mcc="7911" />
+       <merchantTradeValue6 id="Yoga classes" mcc="7911" />
+       <merchantTradeValue6 id="Singing classes" mcc="8299" />
+       <merchantTradeValue6 id="Cooking classes" mcc="8299" />
+       <merchantTradeValue6 id="Zumba classes" mcc="7911" />
+    </merchantTradeValue5>
+    <merchantTradeValue5 id="Services">
+       <merchantTradeValue6 id="Tailors/boutiques" mcc="5697" />
+       <merchantTradeValue6 id="Laundry" mcc="7211" />
+       <merchantTradeValue6 id="Plumber" mcc="7699" />
+       <merchantTradeValue6 id="Electrician" mcc="7629" />
+       <merchantTradeValue6 id="Carpenters" mcc="7641" />
+       <merchantTradeValue6 id="Drycleaners" mcc="7216" />
+       <merchantTradeValue6 id="Automotive services &#38; Workshop" mcc="5541" />
+       <merchantTradeValue6 id="Pest control" mcc="7699" />
+       <merchantTradeValue6 id="Cleaning services" mcc="7349" />
+       <merchantTradeValue6 id="Travel Services" mcc="4722" />
+    </merchantTradeValue5>
+    <merchantTradeValue5 id="Fuel">
+       <merchantTradeValue6 id="Fuel" mcc="5983" />
+    </merchantTradeValue5>
+  </merchantTradeValues>
+</config>

@@ -1,0 +1,19 @@
+select
+      mrs.CUSTOMER_ID "Customer Id", mrs.ACTIVATION_DATE_TIME "Activation Date", 
+      mrs.EMAIL "email", mrs.ORG_NAME "orgName", mrs.MCC_CODE "mcccode", 
+      mrs.PAN_NUMBER "panNumber", mrs.MANAGER_NAME "managerName", mrs.ADDRESS "Address", 
+      mrs.MOBILE "mobile", mrs.BANK_ACCOUNT_NO "bankAccountNo",
+      mrs.CONTACT_NAME "contactName", mrs.OPERATOR_MOBILE_NO "operatorMobileNumber", 
+      mrs.OPERATOR_EMAIL "operatorEmail", mrs.AADHAR "aadhar",
+      mrs.CALLBACK_URL "callbackURL", mrs.QR_STRING "QR String", mrs.UPI_STRING "UPI String", mrs.VPA "VPA", 
+      mrs.MERCHANT_REGISTER_STATUS "Merchant Register Status", mrs.LINK_QR_STATUS "Link QR Status"
+ from (
+      SELECT CUSTOMER_ID, MAX(PROCESSED_ON) as PROCESSED_ON
+      FROM MERCHANT_REGISTER_BATCH_STATS
+      GROUP BY CUSTOMER_ID
+) r
+INNER JOIN MERCHANT_REGISTER_BATCH_STATS mrs
+ON mrs.CUSTOMER_ID = r.CUSTOMER_ID AND mrs.PROCESSED_ON = r.PROCESSED_ON
+where 
+  mrs.MERCHANT_REGISTER_STATUS in('Success', 'Pending', 'TimedOut') and
+  mrs.LINK_QR_STATUS in('Pending', 'CBS Failure')
